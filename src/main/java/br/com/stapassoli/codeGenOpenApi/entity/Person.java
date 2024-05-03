@@ -1,5 +1,6 @@
 package br.com.stapassoli.codeGenOpenApi.entity;
 
+import com.baeldung.openapi.model.PersonRequestRepresentation;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -21,5 +22,10 @@ public class Person {
     private Integer id;
     private String name;
     private Integer age;
+
+    public void update(PersonRequestRepresentation updateRequest) {
+        this.setName(updateRequest.getName());
+        this.setAge(updateRequest.getAge());
+    }
 
 }

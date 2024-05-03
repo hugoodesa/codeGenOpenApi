@@ -9,6 +9,7 @@ paths:
   /api/persons:
     get:
       summary: Retrieve all persons
+      x-spring-paginated: true
       responses:
         "200":
           description: A list of persons
